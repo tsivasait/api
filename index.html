@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF API Frontend</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>PDF API Frontend</h1>
+        
+        <div id="login-section">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <div id="api-section" style="display: none;">
+            <h2>Generate PDF</h2>
+            <form id="generate-pdf-form">
+                <label for="pdf-content">Content:</label>
+                <textarea id="pdf-content" name="content" required></textarea>
+                <button type="submit">Generate PDF</button>
+            </form>
+
+            <h2>Rotate PDF</h2>
+            <form id="rotate-pdf-form" enctype="multipart/form-data">
+                <label for="rotate-file">PDF File:</label>
+                <input type="file" id="rotate-file" name="file" accept="application/pdf" required>
+                <label for="rotate-angle">Angle:</label>
+                <input type="number" id="rotate-angle" name="angle" required>
+                <button type="submit">Rotate PDF</button>
+            </form>
+
+            <h2>Convert PDF to Images</h2>
+            <form id="pdf-to-images-form" enctype="multipart/form-data">
+                <label for="pdf-to-images-file">PDF File:</label>
+                <input type="file" id="pdf-to-images-file" name="file" accept="application/pdf" required>
+                <button type="submit">Convert to Images</button>
+            </form>
+
+            <h2>Extract Text from PDF</h2>
+            <form id="extract-text-form" enctype="multipart/form-data">
+                <label for="extract-text-file">PDF File:</label>
+                <input type="file" id="extract-text-file" name="file" accept="application/pdf" required>
+                <button type="submit">Extract Text</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
